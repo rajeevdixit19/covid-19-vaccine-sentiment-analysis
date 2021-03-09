@@ -16,4 +16,7 @@ class DataParser:
         return self.data.loc[self.data['user_location'].isnull() == False]
 
     def get_user_with_desc_tweets(self):
-        return self.data.loc[self.data['user_description'].isnull == False]
+        return self.data.loc[self.data['user_description'].isnull() == False]
+
+    def get_tweets(self):
+        return self.data[['id', 'text']]
